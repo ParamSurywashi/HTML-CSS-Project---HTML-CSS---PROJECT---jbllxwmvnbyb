@@ -7,7 +7,19 @@
 <script src="https://kit.fontawesome.com/d9b4c31318.js" crossorigin="anonymous"></script>
   <title>Mobile tab navigation</title>
 </head>
-
+ <script>
+  function handleChangeImages(id){
+   if(id=="work_btn"){
+       document.getElementById("imgs").src = "images/Dog.jpg";
+   }else  if(id=="blog_btn"){
+       document.getElementById("imgs").src = "images/car.jpg";
+   }else  if(id=="about_btn"){
+       document.getElementById("imgs").src = "images/anteena.jpg";
+   }else{
+       document.getElementById("imgs").src = "images/mainImage.png";
+   }
+  }
+ </script>
 
 <body>
 
@@ -16,10 +28,10 @@
    <img id="imgs" src="images/mainImage.png" alt="image" />
    </div>
    <div class="second-container">
-	   <button id="home_btn"> <i class="fas fa-house-chimney"></i>Home </button>
-	   <button> <i class="fas fa-box"></i> Work </button>
-	   <button> <i class="fas fa-book-open"></i> Blog</button>
-	   <button id="about_btn"> <i class="fas fa-users"></i> About_Us</button>
+	   <button id="home_btn" onclick="handleChangeImages(this.id)"> <i class="fas fa-house-chimney"></i>Home </button>
+	   <button id="work_btn" onclick="handleChangeImages(this.id)">  <i class="fas fa-box"></i> Work </button>
+	   <button id="blog_btn" onclick="handleChangeImages(this.id)"> <i class="fas fa-book-open"></i> Blog</button>
+	   <button id="about_btn" onclick="handleChangeImages(this.id)"> <i class="fas fa-users"></i> About_Us</button>
    </div>
   
 	  
